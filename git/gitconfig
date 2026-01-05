@@ -1,0 +1,40 @@
+[user]
+  name = oladetounjed
+  email = oladetountemitayo@gmail.com
+
+[init]
+  defaultBranch = master
+
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+
+[color]
+  ui = auto
+
+[fetch]
+  prune = true
+
+[pull]
+  rebase = false
+
+[push]
+  autoSetupRemote = true
+
+[merge]
+  conflictstyle = zdiff3
+
+[diff]
+  colorMoved = default
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  cm = commit
+  ca = commit --amend
+  lg = log --oneline --decorate --graph -n 30
+  unstage = restore --staged .
+  discard = restore .
+  last = log -1 HEAD

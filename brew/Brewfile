@@ -1,0 +1,23 @@
+brew "git"
+brew "asdf"
+brew "starship"
+brew "tmux"
+brew "neovim"
+brew "ripgrep"
+brew "fd"
+brew "jq"
+brew "wget"
+brew "curl"
+brew "tree"
+brew "gnupg"
+brew "openssl@3"
+
+# Optional but very useful
+brew "bat"
+brew "eza"
+brew "fzf"
+
+# If you use Docker/k8s/infra often (optional)
+# brew "kubectl"
+# brew "k9s"
+# brew "terraform"

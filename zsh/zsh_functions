@@ -1,0 +1,14 @@
+# Create dir and cd into it
+mkcd () {
+  mkdir -p "$1" && cd "$1" || return 1
+}
+
+# Show current public IP
+myip () {
+  curl -s https://api.ipify.org && echo
+}
+
+# Git: cleanup merged branches (local)
+gclean () {
+  git branch --merged | egrep -v "(^\*|main|master|develop)" | xargs -n 1 git branch -d
+}

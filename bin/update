@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Updating Homebrew..."
+brew update
+brew upgrade
+brew cleanup
+
+if command -v asdf >/dev/null 2>&1; then
+  echo "Updating asdf plugins..."
+  asdf plugin update --all
+fi
+
+echo "Done."

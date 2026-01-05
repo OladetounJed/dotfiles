@@ -1,0 +1,54 @@
+add_newline = true
+command_timeout = 800
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$elixir\
+$nodejs\
+$python\
+$golang\
+$rust\
+$terraform\
+$kubernetes\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+[character]
+success_symbol = "❯"
+error_symbol = "✖"
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "yellow"
+
+[elixir]
+symbol = "💧 "
+format = "via [$symbol$version]($style) "
+style = "bold magenta"
+
+[nodejs]
+symbol = "⬢ "
+format = "via [$symbol$version]($style) "
+style = "bold green"
+
+[python]
+symbol = "🐍 "
+format = "via [$symbol$version]($style) "
+style = "bold blue"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration]($style) "
+style = "dimmed white"

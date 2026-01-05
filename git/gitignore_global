@@ -1,0 +1,30 @@
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Elixir
+/_build/
+/deps/
+/.cover/
+/doc/
+/tmp/
+erl_crash.dump
+
+# Python
+__pycache__/
+.venv/
+.env
