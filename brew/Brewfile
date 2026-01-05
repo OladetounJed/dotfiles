@@ -1,23 +1,50 @@
+# Core development tools
 brew "git"
+brew "git-filter-repo"
 brew "asdf"
-brew "starship"
-brew "tmux"
+brew "bash-completion"
 brew "neovim"
+brew "tmux"
+brew "starship"
+
+# File & search utilities
 brew "ripgrep"
 brew "fd"
-brew "jq"
-brew "wget"
-brew "curl"
+brew "fzf"
+brew "bat"
+brew "eza"
 brew "tree"
+
+# Network & utilities
+brew "curl"
+brew "wget"
+brew "jq"
 brew "gnupg"
 brew "openssl@3"
 
-# Optional but very useful
-brew "bat"
-brew "eza"
-brew "fzf"
+# DevOps & Kubernetes
+brew "kubectl"
+brew "k9s"
 
-# If you use Docker/k8s/infra often (optional)
-# brew "kubectl"
-# brew "k9s"
-# brew "terraform"
+# Infrastructure as Code
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
+
+# Secrets & deployment CLIs
+tap "infisical/get-cli"
+brew "infisical/get-cli/infisical"
+brew "railway"
+
+# Databases
+tap "mongodb/brew"
+brew "mongodb/brew/mongodb-community"
+brew "postgresql@14"
+brew "redis"
+brew "rabbitmq"
+
+# Language & ecosystem tools
+brew "cocoapods"
+brew "composer"
+brew "phrase-cli"
+brew "circleci"
+brew "exercism"
