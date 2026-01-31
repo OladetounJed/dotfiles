@@ -3,6 +3,12 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="less"
 
+# ----- PATH -----
+# Claude Code CLI
+export PATH="$HOME/.local/bin:$PATH"
+# Dotfiles bin
+export PATH="$HOME/dotfiles/bin:$PATH"
+
 # ----- Homebrew -----
 if [ -x /opt/homebrew/bin/brew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -58,3 +64,6 @@ fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 fi
+
+# Added by Windsurf
+export PATH="/Users/temitayo.oladetoun/.codeium/windsurf/bin:$PATH"

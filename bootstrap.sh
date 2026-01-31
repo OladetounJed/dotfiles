@@ -44,9 +44,14 @@ link_file "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 mkdir -p "$HOME/.config"
 link_file "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
 
+# VS Code extensions list
+mkdir -p "$HOME/.vscode"
+link_file "$DOTFILES_DIR/vscode/extensions.json" "$HOME/.vscode/extensions.json"
+
 info "Done linking."
 
 info "Next:"
 echo "  1) Install brew deps:  brew bundle --file \"$DOTFILES_DIR/brew/Brewfile\""
-echo "  2) Apply macOS defaults (optional):  \"$DOTFILES_DIR/macos/defaults.sh\""
-echo "  3) Restart terminal"
+echo "  2) Add to PATH:  export PATH=\"$DOTFILES_DIR/bin:\$PATH\""
+echo "  3) Apply macOS defaults (optional):  \"$DOTFILES_DIR/macos/defaults.sh\""
+echo "  4) Restart terminal"

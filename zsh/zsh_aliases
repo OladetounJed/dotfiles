@@ -32,3 +32,15 @@ alias asdfu='asdf plugin update --all'
 # Quick edits
 alias zshrc='$EDITOR ~/.zshrc'
 alias dots='cd ~/dotfiles'
+
+# VS Code/Cursor/Windsurf extension sync
+alias ext-compare='~/dotfiles/vscode/sync-extensions.sh compare'
+alias ext-merge='~/dotfiles/vscode/sync-extensions.sh merge'
+alias ext-install='~/dotfiles/vscode/sync-extensions.sh install'
+
+# Disk management
+alias disk-check='~/dotfiles/bin/check-disk-space'
+alias disk-cleanup='~/dotfiles/bin/disk-cleanup'
+
+# Claude Code
+alias claude-session='~/dotfiles/bin/claude-session'

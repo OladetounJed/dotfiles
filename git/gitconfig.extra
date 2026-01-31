@@ -1,0 +1,21 @@
+[alias]
+    # Branch hygiene
+    bclean = "!f() { DEFAULT=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@') || DEFAULT=main; git branch --merged ${1-$DEFAULT} | grep -v " ${1-$DEFAULT}$" | xargs -r git branch -d; }; f"
+    bdone = "!f() { DEFAULT=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@') || DEFAULT=main; git checkout ${1-$DEFAULT} && git pull && git bclean ${1-$DEFAULT}; }; f"
+    
+    # Sync workflow
+    sync = !git pull --rebase && git push
+    
+    # Quick commits
+    wip = commit -am "WIP"
+    save = !git add -A && git commit -m "SAVEPOINT"
+    
+    # Branch management
+    gone = "!git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads/ | awk '$2 == \"[gone]\" { print $1 }'"
+    
+    # GitHub integration
+    browse = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}; }; f"
+    pr = "!f() { URL=$(git config remote.origin.url); BRANCH=$(git rev-parse --abbrev-ref HEAD); open ${URL%.git}/compare/$BRANCH; }; f"
+    
+    # Safe force push
+    fp = "!p() { CURRENT_BRANCH=$(git branch --show-current); git push --force-with-lease --force-if-includes origin +$CURRENT_BRANCH; }; p"

@@ -22,6 +22,10 @@ brew "jq"
 brew "gnupg"
 brew "openssl@3"
 
+# Project management
+tap "atlassian-labs/acli"
+brew "acli"
+
 # DevOps & Kubernetes
 brew "kubectl"
 brew "k9s"

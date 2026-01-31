@@ -1,0 +1,43 @@
+{
+  "product": "pickem88",
+  "company": "Yolo Group",
+  "my_role": "Product Lead",
+  "team": {
+    "name": "Hub88 Sports",
+    "members": [
+      {
+        "name": "Temitayo Oladetoun",
+        "role": "Product Lead",
+        "github": "oladetounjed",
+        "email": "***@yolo.com",
+        "jira_username": "****"
+      },
+      {
+        "name": "Teammate Name",
+        "role": "Senior Engineer",
+        "github": "teammate",
+        "email": "***@yolo.com",
+        "jira_username": "****"
+      }
+    ]
+  },
+  "project_tracking": {
+    "software": "jira",
+    "project_key": "****",
+    "board_id": "123"
+  },
+  "repos": [
+    {
+      "name": "pickem88-api",
+      "url": "https://github.com/coingaming/****",
+      "type": "monorepo"
+    }
+  ],
+  "sprint": {
+    "duration_weeks": 2,
+    "current_goals": [
+      "*****",
+      "*****"
+    ]
+  }
+}
