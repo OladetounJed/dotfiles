@@ -12,3 +12,8 @@ myip () {
 gclean () {
   git branch --merged | egrep -v "(^\*|main|master|develop)" | xargs -n 1 git branch -d
 }
+
+# Search shortcuts guide
+sc () {
+  grep -i --color=always "$1" ~/dotfiles/docs/shortcuts.md
+}

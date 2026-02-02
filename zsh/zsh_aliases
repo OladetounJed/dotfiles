@@ -44,3 +44,7 @@ alias disk-cleanup='~/dotfiles/bin/disk-cleanup'
 
 # Claude Code
 alias claude-session='~/dotfiles/bin/claude-session'
+
+# Shortcuts reference
+alias cheat='cat ~/dotfiles/docs/shortcuts.md'
+alias scf='cat ~/dotfiles/docs/shortcuts.md | fzf --preview="echo {}" --preview-window=up:3:wrap'
